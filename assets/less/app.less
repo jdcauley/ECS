@@ -1,0 +1,260 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+
+@white: #fff;
+@brand-primary: #69321f;
+
+@figure-blue: #104b7d;
+@figure-orange: #a62906;
+@figure-gold: #9b7f42;
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body{
+  padding-top: 15px;
+  background: url(../img/ecs-bg-dark-repeat.jpg) center center repeat;
+}
+
+.wrap{
+  background: @white;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner{
+  background: @white;
+  padding: 20px 20px 0 20px;
+}
+.phone-numbers{
+  display: block;
+  height: auto;
+  width: 100%;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  .east{
+    float: right;
+  }
+  .midwest{
+    float: right;
+  }
+}
+.nav-main{
+  .navbar;
+  .navbar-default;
+  min-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  text-transform: uppercase;
+  background: #441909;
+  border: 0;
+  border-bottom: 1px solid #ede6d4;
+  .navbar-nav>li>a{
+    color: #ede6d4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.navbar-nav.nav-justified {
+    display:table;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+    width:auto;
+}
+.nav-main .navbar-nav>li>a:hover, .nav-main .navbar-nav>li>a:focus{
+  color: #441909;
+  background: #ede6d4;
+}
+.nav-main .navbar-nav>.active>a, .nav-main .navbar-nav>.active>a:hover, .nav-main .navbar-nav>.active>a:focus{
+  color: #441909;
+  background: #ede6d4;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+.features-inner {
+  min-width: 900px;
+  figure {
+    overflow: hidden;
+  }
+  figcaption {
+    height: 100%;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    padding-top: 20px;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+    -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+  }
+}
+.features-inner figure figcaption,.features-inner figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(235px);
+  -moz-transform: translateY(235px);
+  -ms-transform: translateY(235px);
+  transform: translateY(235px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+.features-inner figure:hover figcaption,.features-inner figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(90px);
+  -moz-transform: translateY(90px);
+  -ms-transform: translateY(90px);
+  transform: translateY(90px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+figure {
+  display: inline;
+  margin: 0;
+}
+figcaption {
+  p{
+    font-size: 16px;
+  }
+  img {
+    display: inline-block;
+    padding-right: 25px;
+    vertical-align: baseline;
+    margin-bottom: -5px;
+  }
+}
+.fig-title {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 1px 0 1px #000;
+}
+
+.feature {
+  background-size: cover;
+  color: #fff;
+  width: 33.33%;
+  height: 300px;
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  &:first-child{
+    figcaption{
+      .feature-meta{
+        background: fade(@figure-blue, 40%);
+        border-top: 1px solid @figure-blue;
+      }
+    }
+  }
+  &:last-child{
+    figcaption{
+      .feature-meta{
+        background: fade(@figure-gold, 40%);
+        border-top: 1px solid @figure-gold;
+      }
+    }
+  }
+}
+.features {
+  overflow: scroll;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.feature-meta{
+  background: fade(@figure-orange, 40%);
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid @figure-orange;
+}
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }
