@@ -10,6 +10,9 @@
       <div class="phone-numbers">
         <a class="midwest" href="tel:+1-800-334-3628">Midwest US 1-800-334-3628</a>
       </div>
+      <div class="header-search">
+        <?php get_template_part('templates/searchform'); ?>
+      </div>
     </div>
   </div>
   <div class="nav-main" role="banner">

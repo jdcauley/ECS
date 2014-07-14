@@ -7,7 +7,7 @@ function three_up_posts() {
   register_post_type( 'focus',
 		array(
 			'labels' => array(
-				'name' => __( 'Three Up' ),
+				'name' => __( 'Home Top Hovers' ),
 				'singular_name' => __( 'Three_Up' )
 			),
 		'public' => true,

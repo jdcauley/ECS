@@ -39,45 +39,79 @@
       </div>
 
   <div class="wrap container" role="document">
+    <section class="values">
 
-    <div class="content row">
-      <main class="main <?php echo roots_main_class(); ?>" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-
-    <div class="row">
-      <div class="col-sm-4">
-        <?php $the_query = new WP_Query('showposts=3'); ?>
-        <?php if ( $the_query->have_posts() ) : ?>
-        <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <div class="recent-post-wrapper">
-        <?php if (has_post_thumbnail()): ?>
-          <div class="recent-post-img">
-            <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?>
-          </div>
-          <div class="recent-post-copy">
-            <h4><?php the_title(); ?></h4>
-            <p><?php echo excerpt(25); ?></p>
-          </div>
-          <a class="btn btn-secondary btn-xs" href="<?php the_permalink(); ?>">Read More</a>
-        <?php else: ?>
-          <h4><?php the_title(); ?></h4>
-          <p><?php echo excerpt(15); ?></p>
-          <a class="btn btn-default btn-xs" href="<?php the_permalink(); ?>">Read More</a>
-        <?php endif; ?>
-        </div>
-        <?php wp_reset_postdata(); ?>
-        <?php endwhile; ?>
-        <?php endif; ?>
-      </div>
+    </section>
+    <div class="hr-label">
+      <span class="hr-line"></span>
+      <span class="hr-text">ECS Conservation Services</span>
     </div>
+    <section class="content">
+      <div class="row">
+        <div class="main col-sm-10 col-sm-offset-1" role="main">
+          <?php while (have_posts()) : the_post(); ?>
+            <?php the_content(); ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    </section>
 
+    <section class="services">
+      <div class="row">
+        <div class="col-sm-4">
+          <?php dynamic_sidebar('services-widget-1'); ?>
+        </div>
+        <div class="col-sm-4">
+          <?php dynamic_sidebar('services-widget-2'); ?>
+        </div>
+        <div class="col-sm-4">
+          <?php dynamic_sidebar('services-widget-3'); ?>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-2">
+          <?php dynamic_sidebar('services-widget-4'); ?>
+        </div>
+        <div class="col-sm-4">
+          <?php dynamic_sidebar('services-widget-5'); ?>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3 class="home-news">News</h3>
+          <?php $the_query = new WP_Query('showposts=3'); ?>
+          <?php if ( $the_query->have_posts() ) : ?>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <div class="recent-post-wrapper">
+          <?php if (has_post_thumbnail()): ?>
+            <div class="recent-post-img">
+              <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?>
+            </div>
+            <div class="recent-post-copy">
+              <p>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> -
+                <?php echo excerpt(25); ?>
+              </p>
+            </div>
+          <?php else: ?>
+            <p>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> -
+              <?php echo excerpt(25); ?>
+            </p>
+          <?php endif; ?>
+          </div>
+          <?php wp_reset_postdata(); ?>
+          <?php endwhile; ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-sm-8">
+          <?php dynamic_sidebar('home-tabs'); ?>
+        </div>
+      </div>
+    </section>
   </div><!-- /.wrap -->
 
 

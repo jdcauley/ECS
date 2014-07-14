@@ -22,6 +22,78 @@ function roots_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
+  register_sidebar(array(
+    'name'          => __('Home Page Tabs', 'roots'),
+    'id'            => 'home-tabs',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Left Footer', 'roots'),
+    'id'            => 'footer-left',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Right Footer', 'roots'),
+    'id'            => 'footer-right',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Services Widget One', 'roots'),
+    'id'            => 'services-widget-1',
+    'before_widget' => '<div class="services-widget widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Services Widget Two', 'roots'),
+    'id'            => 'services-widget-2',
+    'before_widget' => '<div class="services-widget widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Services Widget Three', 'roots'),
+    'id'            => 'services-widget-3',
+    'before_widget' => '<div class="services-widget widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Services Widget Four', 'roots'),
+    'id'            => 'services-widget-4',
+    'before_widget' => '<div class="services-widget widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Services Widget Five', 'roots'),
+    'id'            => 'services-widget-5',
+    'before_widget' => '<div class="services-widget widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
   // Widgets
   register_widget('Roots_Vcard_Widget');
 }
