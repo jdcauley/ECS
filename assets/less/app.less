@@ -6,6 +6,7 @@
 
 @white: #fff;
 @brand-primary: #69321f;
+@brand-primary-dark: #441909;
 @brand-gray: #efefef;
 @cararra: #e0dacc;
 @brand-blue: #104b7d;
@@ -30,7 +31,7 @@ body{
 
 .wrap{
   background: @white;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 /* ==========================================================================
@@ -104,11 +105,11 @@ body{
     width:auto;
 }
 .nav-main .navbar-nav>li>a:hover, .nav-main .navbar-nav>li>a:focus{
-  color: #441909;
+  color: @brand-primary-dark;
   background: @cararra;
 }
 .nav-main .navbar-nav>.active>a, .nav-main .navbar-nav>.active>a:hover, .nav-main .navbar-nav>.active>a:focus{
-  color: #441909;
+  color: @brand-primary-dark;
   background: @cararra;
 }
 
@@ -234,10 +235,6 @@ figcaption {
   margin-right: -20px;
   background: @cararra;
 }
-.services-widget{
-  width: 80%;
-}
-
 /* ==========================================================================
    Primary Content
    ========================================================================== */
@@ -256,7 +253,7 @@ figcaption {
 .services-widget{
   display: block;
   height: auto;
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -304,26 +301,38 @@ figcaption {
   color: @brand-primary;
   text-transform: uppercase;
   background: @brand-gray;
-
 }
-.main { }
-
-.hr-line{
-  display: block;
-  width: 90%;
-  margin-left: -20px;
-  border-bottom: 1px solid @brand-primary;
+.tabber-widget-basic-light ul.tabber-widget-tabs a{
+  &:hover, &:focus, &:active{
+    background: @white;
+  }
 }
-.hr-text{
-  width: auto;
-  padding: 3px 20px 3px 30px;
-  margin-top: -10px;
-  float: right;
-  color: @cararra;
-  font-size: 12px;
-  font-weight: 100;
-  text-align: right;
-  background: @brand-primary;
+.main{
+  margin-bottom: 100px;
+}
+
+
+/* Components */
+
+.hr-label{
+  margin: 40px 0 40px -20px;
+  .hr-line{
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid @brand-primary-dark;
+  }
+  .hr-text{
+    width: auto;
+    padding: 4px 20px 4px 30px;
+    margin-top: -10px;
+    float: right;
+    color: @cararra;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: right;
+    line-height: 1;
+    background: @brand-primary-dark;
+  }
 }
 
 /* Gallery Shortcode */
@@ -335,7 +344,11 @@ figcaption {
    Sidebar
    ========================================================================== */
 
-.sidebar { }
+.sidebar{
+  ul{
+    list-style: none;
+  }
+}
 
 
 
@@ -360,6 +373,7 @@ figcaption {
   padding-bottom: 20px;
   background: @cararra;
   h3{
+    font-family: @font-family-serif;
     margin-top: 0;
   }
 }
@@ -369,6 +383,9 @@ figcaption {
   background: @brand-blue;
 }
 
+.tech-triad{
+  .pull-right;
+}
 
 
 /* ==========================================================================

@@ -38,17 +38,19 @@
         </div>
       </div>
 
-  <div class="wrap container" role="document">
+  <main class="wrap container" role="document">
     <section class="values">
 
     </section>
+
     <div class="hr-label">
       <span class="hr-line"></span>
       <span class="hr-text">ECS Conservation Services</span>
     </div>
+
     <section class="content">
       <div class="row">
-        <div class="main col-sm-10 col-sm-offset-1" role="main">
+        <div class="col-sm-10 col-sm-offset-1" role="main">
           <?php while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>
           <?php endwhile; ?>
@@ -77,6 +79,11 @@
         </div>
       </div>
     </section>
+
+    <div class="hr-label">
+      <span class="hr-line"></span>
+      <span class="hr-text">ECS Conservation Offers</span>
+    </div>
 
     <section class="offers">
       <div class="row">
@@ -112,7 +119,7 @@
         </div>
       </div>
     </section>
-  </div><!-- /.wrap -->
+  </main><!-- /.wrap -->
 
 
   <?php get_template_part('templates/footer'); ?>
