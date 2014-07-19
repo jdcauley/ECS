@@ -17,7 +17,22 @@
     }
   ?>
 
+
+  <div class="container">
+    <div class="page-feature-wrap">
+      <?php if(is_page()): ?>
+      <?php while (have_posts()) : the_post(); ?>
+      <?php if (has_post_thumbnail()): ?>
+        <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' ); ?>
+      <div class="page-feature" style="background-image: url(<?php echo $src[0]; ?>);"></div>
+        <?php else: ?>
+      <?php endif; ?>
+      <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
+  </div>
   <div class="container wrap" role="document">
+    <?php get_template_part('templates/page', 'header'); ?>
     <div class="content row">
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>

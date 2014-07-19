@@ -12,6 +12,7 @@
 @brand-blue: #104b7d;
 @brand-orange: #a62906;
 @brand-gold: #9b7f42;
+@page-header: #444;
 
 @font-family-sans-serif:  'Lato' 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-family-serif:       'Merriweather', Georgia, "Times New Roman", Times, serif;
@@ -31,7 +32,7 @@ body{
 
 .wrap{
   background: @white;
-  padding: 20px 40px;
+  padding: 0 40px 20px;
 }
 
 /* ==========================================================================
@@ -39,7 +40,7 @@ body{
    ========================================================================== */
 
 .hr-label{
-  margin: 40px -20px 40px -40px;
+  margin: 30px -20px 30px -40px;
   .hr-line{
     display: block;
     width: 90%;
@@ -143,10 +144,11 @@ body{
    Content
    ========================================================================== */
 
-.content { }
+.content{
+  margin-top: 20px;
+}
 
 .features-inner {
-  min-width: 900px;
   figure {
     overflow: hidden;
   }
@@ -240,10 +242,17 @@ figcaption {
     }
   }
 }
+.home-head{
+  .container;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	overflow: auto;
+	padding: 0;
+	background: #000;
+}
 .features {
-  overflow: scroll;
-  padding-left: 0;
-  padding-right: 0;
+  min-width: 800px;
 }
 
 .feature-meta{
@@ -272,6 +281,27 @@ figcaption {
     font-size: 18px;
   }
 }
+.values{
+  .nav;
+  .navbar-nav;
+  .nav-justified;
+  .hidden-xs;
+  margin-bottom: 30px;
+  li{
+    font-family: @font-family-serif;
+    font-size: 26px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+.doodad{
+  display: block;
+  height: 45px;
+  width: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url(../img/ecs-filial.png)
+}
 .services{
   padding-top: 40px;
   padding-bottom: 40px;
@@ -291,8 +321,22 @@ figcaption {
   }
 }
 .offers{
-  padding-top: 40px;
   padding-bottom: 40px;
+}
+.recent-news{
+  a{
+    color: @brand-blue;
+    &:hover, &:active, &:focus{
+      color: darken(@brand-blue, 50%);
+      text-decoration: underline;
+    }
+  }
+  .row{
+    margin-bottom: 15px;
+  }
+}
+.home-news{
+  margin-top: 0;
 }
 .recent-post-wrapper{
   a{
@@ -350,14 +394,57 @@ figcaption {
   ul{
     list-style: none;
   }
+  h3{
+    text-align: center;
+  }
 }
 
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+.ecs-page-header{
+  margin-left: -40px;
+  margin-right: -40px;
+  padding: 15px 40px 10px;
+  background: @cararra;
+  h1{
+    margin-top: 0;
+    font-size: 32px;
+    color: @page-header;
+    text-transform: uppercase;
+  }
+}
+.page-feature-wrap{
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-feature{
+  display: block;
+  height: 300px;
+  width: 100%;
+  background: url(../img/page-header.jpg) no-repeat, 50% 50%;
+  background-size: cover;
+}
 
 
 /* ==========================================================================
    Posts
    ========================================================================== */
-
+.blog-posts{
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid @brand-primary-dark;
+  &:last-child{
+    border-bottom: none;
+  }
+  img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .hentry header { }
 .hentry time { }
 .hentry .byline { }
@@ -394,17 +481,30 @@ figcaption {
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
    ========================================================================== */
-
+.post, .page{
+  img{
+    height: auto;
+    max-width: 100%;
+  }
+}
 .aligncenter{
   display: block;
   margin: 0 auto;
-  height: auto;
-  width: 100%;
-  max-width: 100%;
+  padding: 10px;
 }
-.alignleft { float: left; }
-.alignright { float: right; }
+.alignleft {
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+.alignright {
+  float: right;
+  padding: 10px 0 10px 10px;
+}
 figure.alignnone { margin-left: 0; margin-right: 0; }
+.gallery-item{
+  margin: 5px;
+  min-width: 150px;
+}
 
 
 
@@ -414,6 +514,11 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 
 @media (min-width: @screen-sm-min) { }
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+  .gallery-item{
+    margin: 20px auto;
+    min-width: 150px;
+  }
+}
 
 @media (min-width: @screen-lg-min) { }
