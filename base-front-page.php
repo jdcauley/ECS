@@ -50,7 +50,7 @@
         <li>Professionalism</li>
       </ul>
 
-      <div class="row">
+      <div class="row page-content">
         <div class="col-sm-10 col-sm-offset-1" role="main">
           <?php while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>

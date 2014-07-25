@@ -13,6 +13,7 @@
 @brand-orange: #a62906;
 @brand-gold: #9b7f42;
 @page-header: #444;
+@link-blue: #303B72;
 
 @font-family-sans-serif:  'Lato' 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-family-serif:       'Merriweather', Georgia, "Times New Roman", Times, serif;
@@ -286,7 +287,6 @@ figcaption {
   .navbar-nav;
   .nav-justified;
   .hidden-xs;
-  margin-bottom: 30px;
   li{
     font-family: @font-family-serif;
     font-size: 26px;
@@ -296,11 +296,15 @@ figcaption {
 }
 .doodad{
   display: block;
-  height: 45px;
-  width: 44px;
+  height: 40px;
+  width: 40px;
   margin-left: auto;
   margin-right: auto;
-  background: url(../img/ecs-filial.png)
+  background: url(../img/ecs-filial.png) no-repeat 50% 50%;
+  background-size: 75%;
+}
+.page-content{
+  margin-top: 60px;
 }
 .services{
   padding-top: 40px;
@@ -360,7 +364,7 @@ figcaption {
     height: 300px;
     width: 100%;
     background: @white;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 .tabber-widget-basic-light ul.tabber-widget-tabs a.selected, .tabber-widget-basic-light ul.tabber-widget-tabs a.selected:hover{
@@ -379,6 +383,21 @@ figcaption {
 }
 .main{
   margin-bottom: 100px;
+  a{
+    text-decoration: underline;
+    h1, h2, h3, h4, h5{
+      text-decoration: none;
+    }
+    &:hover, &:active, &:focus{
+      color: @link-blue;
+      text-decoration: none;
+    }
+  }
+  h1, h2, h3, h4, h5{
+    a{
+      text-decoration: none;
+    }
+  }
 }
 
 /* Gallery Shortcode */
@@ -512,7 +531,11 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-sm-min) {
+  sidebar{
+    padding-left: 30px;
+  }
+}
 
 @media (min-width: @screen-md-min) {
   .gallery-item{
